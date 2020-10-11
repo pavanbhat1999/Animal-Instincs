@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel="stylesheet" type="text/css" href="normalize.css">
+        <link rel="stylesheet" type="text/css" href="Grid.css">
+        <link rel="stylesheet" type="text/css" href="ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="ionicons.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="queries.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet"> 
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        
+        <title>DASAI</title>
+        
+        
+    
+    </head>
+    
+    
+    
+    
+    <body>
+        
+        <header>
+            
+            <nav>
+            
+                <div class="row">
+                    
+                    <img src="Resources/Images/ibm.png" alt="Ganesh_logo" class="logo_img">
+                    
+                    
+                    <ul class="main_nav">
+                        
+                        <li><a href="#about_us">ABOUT US</a> </li>
+                        
+                        <li><a href="#emer_guide">EMERGENCY GUIDELINES</a> </li>
+                        
+                        <li><a href="#rog_beh">REPORT ROGUE BEHAVIOUR</a> </li>
+                        
+                        <li><a href="#teams">MEET THE TEAM</a> </li>
+                        
+                        <li><a href="#signup_form">JOIN US</a> </li>
+                        
+                    </ul>
+                
+                </div>
+            
+            </nav>
+        
+            <div class="message_1">
+                
+                <h1>Join The Revolution</h1>
+                
+                
+                
+                <a class="btn btn1" href="#about_us">Take The Pledge!</a>
+                
+            
+            </div>
+        
+        </header>
+        
+        <section class="about_us"  id="about_us">
+            
+            <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+           
+            
+            <h2>Our Mission</h2>
+        
+            <div class="row">
+                
+                <h3>
+                    
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Protect and safeguard human life from natural disasters.<br><br><br>
+                
+                </h3>
+                
+            <h2>Our Vision</h2> 
+                
+                
+            
+                <h3>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Be the go-to organization for disaster relief. <br><br>
+                
+                    
+                </h3>
+            
+                <h2>Our Secret?</h2>
+                
+                <h3>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Wild animals have been scientfically proven to have a natural insticts to detect imminent disasters. They go<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; rogue a day before or two on the forecoming disaster. Our team has built an automated tracking and warning<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; system to keep track of such animal behaviour and notify the nearest emergency disaster relief services.<br><br>
+                             
+                
+            </div>
+            
+        </section>
+            
+            <section class="rog_beh" id="rog_beh">
+        
+            <div class="row">
+            
+                <h2 class="rog">Report Rogue Animal Behaviour</h2>
+            
+            </div>
+            
+            <div class="row">
+            
+                <form method="post" class="rog_form" action="#">
+                
+                    <div class="row">
+                
+                        <div class="col span-1-of-3">
+                    
+                            <label>Animal Species</label>
+                    
+                    
+                        </div>
+                    
+                        <div class="col span-1-of-3">
+                    
+                            <select name="log_type" id="log_type" required>
+                                
+                            <option value="admin_acc" selected>&nbsp;</option>
+                        
+                            <option value="admin_acc">Elephant</option>
+                            
+                            <option value="norm_user_male">Sheep</option>
+                                
+                            <option value="norm_user_female">Cow</option>
+                                
+                            <option value="mentor_user" >Dog</option>
+                            
+                            <option value="sp_horse" >Horse</option>
+                                
+                            <option value="mentor_user" >Bird</option>
+                        
+                        </select> 
+                    
+                    
+                        </div>
+                
+                    </div>
+                    
+                    <div class="row">
+                
+                        <div class="col span-1-of-3">
+                    
+                            <label>Location of the incident</label>
+                    
+                    
+                        </div>
+                    
+                        <div class="col span-2-of-3">
+                    
+                            <button onclick="getLocation()">Enable GPS Service</button>
+
+                                <p id="demo"></p>
+
+                                    <script>
+                                            var x = document.getElementById("demo");
+
+                                            function getLocation() 
+                                            {
+                                                if (navigator.geolocation) 
+                                                {
+                                                        navigator.geolocation.getCurrentPosition(showPosition);
+                                                } 
+                                                else 
+                                                { 
+                                                    x.innerHTML = "Geolocation is not supported by this browser.";
+                                                    
+                                                }
+                                            }
+
+                                            function showPosition(position) 
+                                            {
+                                            x.innerHTML = "Latitude: " + position.coords.latitude + 
+                                            "<br>Longitude: " + position.coords.longitude;
+                                            }
+                                    </script>
+                        
+                        </div>
+                
+                    </div>
+                    
+                    <div class="row">
+                
+                        <div class="col span-1-of-3">
+                    
+                            <label>Did the animal wander off to another habitat?</label>
+                    
+                    
+                        </div>
+                    
+                        <div class="col span-1-of-3">
+                    
+                            <select name="log_type" id="log_type" required>
+                        
+                            <option value="wan_yes">Yes</option>
+                            
+                            <option value="wan_no" selected>No</option>
+                                
+                        
+                        </select> 
+                    
+                    
+                        </div>
+                
+                    </div>
+                    
+                    <div class="row">
+                
+                        <div class="col span-1-of-3">
+                    
+                            <label>Did the animal exhibit passive or aggressive behaviour?</label>
+                    
+                    
+                        </div>
+                    
+                        <div class="col span-1-of-3">
+                    
+                            <select name="log_type" id="log_type" required>
+                        
+                            <option value="wan_yes">Yes</option>
+                            
+                            <option value="wan_no" selected>No</option>
+                                
+                        
+                        </select> 
+                    
+                    
+                        </div>
+                
+                    </div>
+                    
+                    <div class="row">
+                
+                    <div class="col span-1-of-3">
+                    
+                        <label>Pledge the truth?</label>
+                    
+                    
+                    </div>
+                    
+                    <div class="col span-2-of-3">
+                    
+                        <input type="checkbox" name="truth" id="truth" checked>I do confirm that the above information provided is true and do agree for that the organization has total immunity to take legal action against me.
+                    
+                    
+                    </div>
+                
+                </div>
+                    
+                    <div class="row">
+                
+                    <div class="col span-1-of-3">
+                    
+                        <label>&nbsp;</label>
+                    
+                    
+                    </div>
+                
+                    
+                    <div class="col span-2-of-3">
+                    
+                        <input type="submit" value="Submit">
+                    
+                    
+                    </div>
+                
+                </div>
+                                  
+                
+                </form>
+         
+            
+            </div>
+              
+        
+        </section>
+        
+        
+        <section class="how_it_works" id="how_it_works">
+            
+            <div class="row">
+            
+                <h2>How does it work? &mdash; Like a charm</h2>
+            
+            </div>
+             
+            
+            <div class="row">
+            
+                <div class="col span-1-of-2 steps-box">
+                    
+                    <div class="work_step">
+                        
+                        <div>1</div>
+                    
+                        <p>Sign up for free.</p>
+                    
+                    </div>
+                
+                    
+                    
+                    <div class="work_step">
+                    
+                        <div>2</div>
+                    
+                        <p>Customize your profile.</p>
+                    
+                    </div>
+                    
+                    
+                    
+                    <div class="work_step">
+                    
+                        <div>3</div>
+                    
+                        <p>Search for people based on your preferences.</p>
+                    
+                    </div>
+                    
+                    
+                    
+                    <div class="work_step">
+                    
+                        <div>4</div>
+                    
+                        <p>Send them a request.</p>
+                    
+                    </div>
+                    
+                    
+                    
+                    <div class="work_step">
+                    
+                        <div>5</div>
+                    
+                        <p>Happy Dating.</p>
+                    
+                    </div>
+                    
+                    <a href="#" class="btn-app"><img src="Resources/Images/g_play.png" class="g"> </a>
+                    <a href="#" class="btn-app"><img src="Resources/Images/a_store.png" class="a"> </a>
+                    
+                   
+                
+                </div>
+            
+            
+            </div>
+                
+        
+            
+        </section>
+        
+        <section class="teams" id="teams">
+        
+            <div class="row">
+                
+                <h2>We're currently operating in these cities</h2>
+            
+            </div>
+            
+            <div class="row">
+                
+                <div class="col span-1-of-4 city">
+                
+                    <img src="Resources/Images/chen.jpg" class="mys_img">
+                    
+                    <h3 class="loca">Coimbatore,Tamil Nadu </h3>
+                    
+                    <div class="city_feature">
+                    
+                        <ion-icon name="happy"></ion-icon>
+                        2000+ Users
+                        
+                    </div>
+                    
+                    <div class="city_feature">
+                    
+                        <ion-icon name="logo-twitter"></ion-icon>
+                        @onlinedate_coim
+                        
+                    </div>
+                    
+                    
+                
+                </div>
+            
+                <div class="col span-1-of-4">
+                
+                    <img src="Resources/Images/mysore.jpg" class="mys_img">
+                    
+                    <h3 class="loca">Mysore,Karnataka</h3>
+                    
+                    <div class="city_feature">
+                    
+                        <ion-icon name="happy"></ion-icon>
+                        1600+ Users
+                        
+                    </div>
+                    
+                    <div class="city_feature">
+                    
+                        <ion-icon name="logo-twitter"></ion-icon>
+                        @onlinedate_mys
+                        
+                    </div>
+                    
+                    
+                
+                </div>
+                
+                
+                
+                <div class="col span-1-of-4">
+                
+                    <img src="Resources/Images/kera.jpg" class="mys_img">
+                    
+                    <h3 class="loca">Kozhikode,Kerala</h3>
+                    
+                    <div class="city_feature">
+                    
+                        <ion-icon name="happy"></ion-icon>
+                        1400+ Users
+                        
+                    </div>
+                    
+                    <div class="city_feature">
+                    
+                        <ion-icon name="logo-twitter"></ion-icon>
+                        @onlinedate_coim
+                        
+                    </div>
+                    
+                    
+                
+                </div>
+                
+                <div class="col span-1-of-4">
+                
+                    <img src="Resources/Images/vijay.jpg" class="mys_img">
+                    
+                    <h3 class="loca">Vijayawada,Andra Pradesh</h3>
+                    
+                    <div class="city_feature">
+                    
+                        <ion-icon name="happy"></ion-icon>
+                        1500+ Users
+                        
+                    </div>
+                    
+                    <div class="city_feature">
+                    
+                        <ion-icon name="logo-twitter"></ion-icon>
+                        @onlinedate_vij
+                        
+                    </div>
+                    
+                    
+                
+                </div>
+            
+            </div>
+        
+        </section>
+        
+        
+        
+        <section class="signup_form" id="signup_form">
+        
+            <div class="row">
+            
+                <h2 class="sign_me_up">Sign Me Up As A User!</h2>
+            
+            </div>
+            
+            
+            
+            <div class="row">
+            
+                <form method="post" action="signup.php" class="signups">
+                    
+                    
+                    
+                    
+                    <div class="row">
+                
+                    <div class="col span-1-of-3">
+                    
+                        <label>Gender</label>
+                    
+                    
+                    </div>
+                    
+                    <div class="col span-2-of-3">
+                    
+                        <select name="reg_gen_user" id="reg_gen_user" required>
+                        
+                            <option value="Male">Male</option>
+                            
+                            <option value="Female" selected>Female</option>
+                        
+                        </select> 
+                    
+                    
+                    </div>
+                
+                </div>
+                
+                <div class="row">
+                
+                    <div class="col span-1-of-3">
+                    
+                        <label>Name</label>
+                    
+                    
+                    </div>
+                    
+                    <div class="col span-2-of-3">
+                    
+                        <input type="text" name="names_user" id="names_user" placeholder="Your full name" required>
+                    
+                    </div>
+                
+                </div>
+                    
+                <div class="row">
+                
+                    <div class="col span-1-of-3">
+                    
+                        <label>Contact Number</label>
+                    
+                    
+                    </div>
+                    
+                    <div class="col span-2-of-3">
+                    
+                        <input  type="text" name="c_num_user" id="c_num_user" pattern="[789][0-9]{9}" placeholder="Starting with [7,8,9] followed by 9 digits" required>
+                    
+                    
+                    </div>
+                
+                </div>
+
+                <div class="row">
+                
+                    <div class="col span-1-of-3">
+                    
+                        <label>Date Of Birth</label>
+                    
+                    
+                    </div>
+                    
+                    <div class="col span-2-of-3">
+                    
+                        <input type="date" name="dates_user" id="dates_user" required>
+                    
+                    
+                    </div>
+                
+                </div>
+                    
+                <div class="row">
+                
+                    <div class="col span-1-of-3">
+                    
+                        <label>Caste</label>
+                    
+                    
+                    </div>
+                    
+                    <div class="col span-2-of-3">
+                    
+                        <select name="caste_type_user" id="caste_type_user" required>
+                        
+                            <option value="brahmin" selected>Brahmins</option>
+                            
+                            <option value="kshatriya">Khatriyas</option>
+                            
+                            <option value="vaishya">Vaishyas</option>
+                            
+                            <option value="shudra">Shudras</option>
+                            
+                            <option value="dalit">Dalits</option>
+                        
+                        </select> 
+                    
+                    
+                    </div>
+                
+                </div>
+                
+                <div class="row">
+                
+                    <div class="col span-1-of-3">
+                    
+                        <label>Email ID</label>
+                    
+                    
+                    </div>
+                    
+                    <div class="col span-2-of-3">
+                    
+                        <input type="email" name="email_user" id="email_user" placeholder="Your e-mail ID" required>
+                    
+                    
+                    </div>
+                
+                </div>
+                    
+                    
+                    
+                
+                
+                
+                <div class="row">
+                
+                    <div class="col span-1-of-3">
+                    
+                        <label>Receive Newsletter?</label>
+                    
+                    
+                    </div>
+                    
+                    <div class="col span-2-of-3">
+                    
+                        <input type="checkbox" name="news" id="news" checked> Send me notifications
+                    
+                    
+                    </div>
+                
+                </div>
+                    
+                
+                    
+                
+                
+                <div class="row">
+                
+                    <div class="col span-1-of-3">
+                    
+                        <label>&nbsp;</label>
+                    
+                    
+                    </div>
+                
+                    
+                    <div class="col span-2-of-3">
+                    
+                        <input type="submit" value="Submit">
+                    
+                    
+                    </div>
+                
+                </div>
+                    
+                    
+                
+                    
+            </form>
+            
+            </div>
+        
+        
+        
+        </section>
+        
+        <section class="signup_form" id="signup_form">
+        
+            <div class="row">
+            
+                <h2 class="sign_me_up">Sign Me Up As A Mentor/Parent!</h2>
+            
+            </div>
+            
+            
+            
+            <div class="row">
+            
+                <form method="post" action="signup_mentor.php" class="signups">
+                    
+                    
+                    
+                    
+                    <div class="row">
+                
+                    <div class="col span-1-of-3">
+                    
+                        <label>Gender</label>
+                    
+                    
+                    </div>
+                    
+                    <div class="col span-2-of-3">
+                    
+                        <select name="reg_gen_mentor" id="reg_gen_mentor" required>
+                        
+                            <option value="Male">Male</option>
+                            
+                            <option value="Female" selected>Female</option>
+                        
+                        </select> 
+                    
+                    
+                    </div>
+                
+                </div>
+                
+                <div class="row">
+                
+                    <div class="col span-1-of-3">
+                    
+                        <label>Name</label>
+                    
+                    
+                    </div>
+                    
+                    <div class="col span-2-of-3">
+                    
+                        <input type="text" name="names_mentor" id="names_mentor" placeholder="Your full name" required>
+                    
+                    </div>
+                
+                </div>
+                    
+                <div class="row">
+                
+                    <div class="col span-1-of-3">
+                    
+                        <label>Contact Number</label>
+                    
+                    
+                    </div>
+                    
+                    <div class="col span-2-of-3">
+                    
+                        <input  type="text" name="c_num_mentor" id="c_num_mentor" pattern="[789][0-9]{9}" placeholder="Starting with [7,8,9] followed by 9 digits" required>
+                    
+                    
+                    </div>
+                
+                </div>
+
+                <div class="row">
+                
+                    <div class="col span-1-of-3">
+                    
+                        <label>Date Of Birth</label>
+                    
+                    
+                    </div>
+                    
+                    <div class="col span-2-of-3">
+                    
+                        <input type="date" name="dates_mentor" id="dates_mentor" required>
+                    
+                    
+                    </div>
+                
+                </div>
+                    
+                <div class="row">
+                
+                    <div class="col span-1-of-3">
+                    
+                        <label>Caste</label>
+                    
+                    
+                    </div>
+                    
+                    <div class="col span-2-of-3">
+                    
+                        <select name="caste_type_mentor" id="caste_type_mentor" required>
+                        
+                            <option value="brahmin" selected>Brahmins</option>
+                            
+                            <option value="kshatriya">Khatriyas</option>
+                            
+                            <option value="vaishya">Vaishyas</option>
+                            
+                            <option value="shudra">Shudras</option>
+                            
+                            <option value="dalit">Dalits</option>
+                        
+                        </select> 
+                    
+                    
+                    </div>
+                
+                </div>
+                
+                <div class="row">
+                
+                    <div class="col span-1-of-3">
+                    
+                        <label>Email ID</label>
+                    
+                    
+                    </div>
+                    
+                    <div class="col span-2-of-3">
+                    
+                        <input type="email" name="email_mentor" id="email_mentor" placeholder="Your e-mail ID" required>
+                    
+                    
+                    </div>
+                
+                </div>
+                    
+                    
+                    <div class="row">
+                
+                    <div class="col span-1-of-3">
+                    
+                        <label>Gender Of Related User:</label>
+                    
+                    
+                    </div>
+                    
+                    <div class="col span-2-of-3">
+                    
+                        <select name="related_reg_gen_mentor" id="related_reg_gen_mentor" required>
+                        
+                            <option value="Male">Male</option>
+                            
+                            <option value="Female" selected>Female</option>
+                        
+                        </select> 
+                    
+                    
+                    </div>
+                
+                </div>
+                    <div class="row">
+                
+                    <div class="col span-1-of-3">
+                    
+                        <label>ID Of Related User:</label>
+                    
+                    
+                    </div>
+                    
+                    <div class="col span-2-of-3">
+                    
+                        <input type="text" name="related_userid_mentor" id="related_userid_mentor" placeholder="Unique ID of sibling" required>
+                    
+                    </div>
+                
+                </div>
+                    
+                    <div class="row">
+                
+                    <div class="col span-1-of-3">
+                    
+                        <label>Receive Newsletter?</label>
+                    
+                    
+                    </div>
+                    
+                    <div class="col span-2-of-3">
+                    
+                        <input type="checkbox" name="news" id="news" checked> Send me notifications
+                    
+                    
+                    </div>
+                
+                </div>
+                       
+                
+                <div class="row">
+                
+                    <div class="col span-1-of-3">
+                    
+                        <label>&nbsp;</label>
+                    
+                    
+                    </div>
+                
+                    
+                    <div class="col span-2-of-3">
+                    
+                        <input type="submit" value="Submit">
+                    
+                    
+                    </div>
+                
+                </div>
+                    
+                    
+                
+                    
+            </form>
+            
+            </div>
+        
+        
+        
+        </section>
+        
+        
+        
+        
+        <section class="emer_guide" id="emer_guide">
+        
+            <h2>
+                Meet our innovators
+            </h2>
+            
+            <div class="hv_images">
+                
+            
+                <img src="Resources/Images/hari.jpg" class="hari">
+                
+                <img src="Resources/Images/vilas_t.jpg" class="vilas_t">
+                
+                
+            </div>
+            <div class="row">
+                
+                <div class="col span-1-of-2">
+                    
+                
+                    <h3 class="hari_name"> Harish B </h3>
+                
+    
+            </div>
+            
+            <div class="col span-1-of-2">
+                    
+                
+                    <h3 class="vilas_name"> A Vilas Reddy </h3>
+                
+    
+            </div>
+            
+            
+            
+            </div>
+            
+                
+        </section>
+        
+        <footer>
+        
+            <div class="row">
+            
+                <div class="col span-1-of-2">
+                
+                    <ul class="footer_nav" >
+                    
+                        <li><a href="#about_us">About Us</a> </li>
+                        <li><a href="#how_it_works">Working</a> </li>
+                        <li><a href="#teams">teamss of Operation</a> </li>
+                        <li><a href="#emer_guide">Meet the team</a> </li>
+                        <li><a href="#rog_beh">Login</a> </li>
+                        <li><a href="#signup_form">Sign Up</a> </li>
+                    
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
+                
+                    <ul class="social_links">
+                    
+                        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-googleplus"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-reddit"></ion-icon></a></li>
+                    
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+            
+                <p>
+                
+                    A special thanks to our proffessors Latharani and Ancy Thomas for helping us when we needed them the most. A hearty thanks to all our friends and family to help us finish this project.
+                </p>
+            </div>
+        </footer>
+        
+        
+        
+    </body>
+
+</html>
+
+<!--
+                    <input type="email" name="login_email" id="login_email" placeholder="Your registered e-mail ID" required>    
+                    
+-->
